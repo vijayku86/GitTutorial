@@ -1,0 +1,115 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fnil\fcharset0 Menlo-Bold;\f1\fnil\fcharset0 Menlo-Regular;\f2\fswiss\fcharset0 ArialMT;
+\f3\fswiss\fcharset0 Helvetica;\f4\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red27\green29\blue31;\red235\green236\blue237;\red38\green38\blue38;
+\red248\green255\blue82;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b\fs22 \cf0 \CocoaLigature0 set up/create ssh in local system
+\f1\b0 \
+ssh-keygen -t rsa -b 4096 -C 'Mobilecoc1@gmail.com'\
+eval "$(ssh-agent -s)"\
+ls -al ~/.ssh\
+pbcopy < ~/.ssh/id_rsa.pub\
+\
+copy it to git account\
+\
+
+\f0\b git init
+\f1\b0 \
+\
+
+\f0\b git pull 'https://github.com/mercertrans/MercerMobile.git'
+\f1\b0 \
+\
+
+\f0\b git remote add origin git@github.com:mercertrans/MercerMobile.git
+\f1\b0 \
+\
+
+\f0\b git fetch origin
+\f1\b0 \
+\
+
+\f0\b git checkout -b 'pending_code_commit'
+\f1\b0 \
+\
+//\'97\'97\
+
+\f0\b To check whether the git is attached to remote repository 
+\f1\b0 \
+git remote -v\
+\
+
+\f0\b * to track the all git history under your tab
+\f1\b0 \
+git status\
+\
+
+\f0\b * If your repo contains few files which is removed from  master:
+\f1\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl300\sa150\partightenfactor0
+\ls1\ilvl0
+\fs26 \cf2 \cb3 \CocoaLigature1 {\listtext	1.	}\expnd0\expndtw0\kerning0
+git checkout master
+\f2\fs30 \cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl300\sa150\partightenfactor0
+\ls1\ilvl0
+\f1\fs26 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	2.	}\expnd0\expndtw0\kerning0
+git fetch origin
+\f2\fs30 \cb1 \
+\ls1\ilvl0
+\f1\fs26 \cb3 \kerning1\expnd0\expndtw0 {\listtext	3.	}\expnd0\expndtw0\kerning0
+git reset --hard origin/master
+\f2\fs30 \cb1 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl300\partightenfactor0
+\ls1\ilvl0
+\f1\fs26 \cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	4.	}\expnd0\expndtw0\kerning0
+git checkout -b newbranch
+\f2\fs30 \cb1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+
+\f0\b * to overrite a file:
+\f1\b0 \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\CocoaLigature1 git checkout file_to_overwrite\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs22 \cf0 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\
+
+\f0\b To generate a SSH key pair for git
+\f1\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 \CocoaLigature1 enter your password for the ssh key id_rsa\
+\
+To configure git account:\
+\pard\pardeftab720\sl340\partightenfactor0
+
+\f4\fs26 \cf1 \cb4 \expnd0\expndtw0\kerning0
+git config --global user.name "\cf5 YOUR NAME\cf1 "\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\
+\pard\pardeftab720\sl340\partightenfactor0
+
+\f4\fs26 \cf1 \cb4 \expnd0\expndtw0\kerning0
+git config --global user.email "\cf5 YOUR EMAIL ADDRESS\cf1 "\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\sl340\partightenfactor0
+
+\f4\fs26 \cf1 \cb4 \expnd0\expndtw0\kerning0
+ssh-keygen -t rsa -b 4096 -C \'93\cf5 \cb4 vijay8610yadav@gmail.com\cf1 \cb4 \'94\
+\
+}
